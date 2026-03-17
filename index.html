@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1 месяц вместе 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff0f5;
+    overflow: hidden;
+}
+
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(pink 2px, transparent 2px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+.card {
+    position: relative;
+    max-width: 500px;
+    margin: 80px auto;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-size: 32px;
+    color: #ff4f87;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.6;
+}
+.cat {
+    width: 220px;
+    animation: float 3s ease-in-out infinite;
+    margin-bottom: 20px;
+
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    background: #ff7aa2;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff5f90;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="card">
+    <img class="cat" src="cat.gif">
+
+    <div class="title">С первым месяцем вместе 💖</div>
+
+    <div class="text">
+        Спасибо тебе за этот месяц,<br>
+        за улыбки, тепло и заботу 🐾
+    </div>
+
+    <button onclick="showMessage()">Открыть письмо 💌</button>
+
+    <div id="message" class="hidden text" style="margin-top:20px;">
+        Ты делаешь мои дни счастливее.<br>
+        Пусть это только начало нашей красивой истории ❤️
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById('message').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
